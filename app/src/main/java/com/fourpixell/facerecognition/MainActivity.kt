@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             FaceRecognitionTheme(dynamicColor = false) {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    HomeScreen()
+                    AppNavigation()
                 }
             }
         }
