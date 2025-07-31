@@ -18,13 +18,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.fourpixell.facerecognition.R
 
 @Composable
-fun HomeScreen(){
+fun HomeScreen(
+    onNavigateToRegister: () -> Unit,
+    onNavigateToVerify: () -> Unit
+){
     Column(
         modifier = Modifier.fillMaxSize()
             .padding(horizontal = 24.dp),
@@ -41,14 +43,14 @@ fun HomeScreen(){
 
         HomeActionButtons(
             text = "REGISTER FACE",
-            onClick = {}
+            onClick = onNavigateToRegister
         )
 
         Spacer( modifier = Modifier.height(30.dp))
 
         HomeActionButtons(
             text = "VERIFY FACE",
-            onClick = {}
+            onClick = onNavigateToVerify
         )
 
 
@@ -79,9 +81,3 @@ fun HomeActionButtons(
 
 }
 
-
-@Preview(showBackground = true, showSystemUi = true)
-@Composable
-fun FacialRecognitionScreenPreview() {
-    HomeScreen()
-}

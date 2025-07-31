@@ -56,4 +56,31 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+
+    // CameraX dependencies
+    implementation("androidx.camera:camera-core:1.3.1")
+    implementation("androidx.camera:camera-camera2:1.3.1")
+    implementation("androidx.camera:camera-lifecycle:1.3.1")
+    implementation("androidx.camera:camera-view:1.3.1")
+
+    // ML Kit Face Detection- This takes face as 2D
+    //implementation("com.google.mlkit:face-detection:16.1.6")
+
+    // Add the ARCore SDK - Takes face as 3D
+    implementation("com.google.ar:core:1.41.0")
+
+    // Accompanist for permissions
+    implementation("com.google.accompanist:accompanist-permissions:0.31.5-beta")
+
+    // GLSurfaceView for rendering AR content
+    implementation("androidx.compose.ui:ui-viewbinding:1.6.7")
+
+    // ViewModel utilities for Compose
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+
+    // Jetpack Compose Navigation
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+
+
 }
