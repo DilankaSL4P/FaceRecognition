@@ -9,6 +9,7 @@ import androidx.navigation.navArgument
 import com.fourpixell.facerecognition.homesection.HomeScreen
 import com.fourpixell.facerecognition.registerfacesection.RegisterFaceScreen
 
+
 object AppRoutes {
     const val HOME = "home"
     const val SCAN_FACE = "scan_face/{scanType}"
@@ -44,7 +45,7 @@ fun AppNavigation() {
         ) { backStackEntry ->
             // Extract the scanType argument from the route
             val scanType = backStackEntry.arguments?.getString("scanType") ?: "unknown"
-            RegisterFaceScreen(scanType = scanType)
+            RegisterFaceScreen(scanType = scanType, navController = navController)
         }
     }
 }

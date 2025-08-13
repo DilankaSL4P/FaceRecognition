@@ -15,6 +15,9 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+        renderscriptTargetApi = 31
+        renderscriptSupportModeEnabled = true
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -49,6 +52,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.vision.common)
+    implementation(libs.play.services.mlkit.face.detection)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -81,6 +86,10 @@ dependencies {
 
     // Jetpack Compose Navigation
     implementation("androidx.navigation:navigation-compose:2.7.7")
+
+    implementation("androidx.compose.material:material-icons-extended:1.7.0")
+
+
 
 
 }
